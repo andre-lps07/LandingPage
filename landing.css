@@ -1,0 +1,382 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #000;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.logo:hover img {
+    transform: rotate(10deg);
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    color: #E51C23;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #E51C23;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Banner */
+.banner {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('arena.jpg') center/cover no-repeat;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.banner .container {
+    animation: fadeIn 1s ease-out;
+}
+
+.banner h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.banner .escudo {
+    height: 180px;
+    margin: 30px 0;
+    filter: drop-shadow(0 0 10px rgba(229,28,35,0.5));
+    transition: transform 0.5s;
+}
+
+.banner .escudo:hover {
+    transform: scale(1.1);
+}
+
+.botao {
+    display: inline-block;
+    background: #E51C23;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    margin-top: 20px;
+    border: 2px solid #E51C23;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.botao:hover {
+    background: transparent;
+    color: #E51C23;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Seções */
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #E51C23;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2 span {
+    color: #E51C23;
+}
+
+.sobre {
+    background: #fff;
+}
+
+.conteudo {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.conteudo img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.5s;
+}
+
+.conteudo img:hover {
+    transform: scale(1.02);
+}
+
+.conteudo p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Títulos */
+.titulos {
+    background: #f5f5f5;
+}
+
+.lista-titulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.titulo {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.titulo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.titulo h3 {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.titulo p {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.titulo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Ídolos */
+.idolos {
+    background: #000;
+    color: #fff;
+}
+
+.lista-idolos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.idolo {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.idolo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.idolo img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+}
+
+.idolo:hover img {
+    filter: grayscale(0%);
+}
+
+.idolo h3 {
+    margin: 20px 0 10px;
+    color: #E51C23;
+    font-size: 1.5rem;
+}
+
+.idolo p {
+    padding: 0 20px 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer img {
+    height: 80px;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+footer img:hover {
+    transform: rotate(360deg);
+}
+
+footer p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo span {
+        font-size: 1rem;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+    
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner p {
+        font-size: 1.2rem;
+    }
+    
+    .banner .escudo {
+        height: 120px;
+    }
+    
+    .conteudo {
+        flex-direction: column;
+    }
+    
+    .conteudo img {
+        width: 100%;
+    }
+    
+    section {
+        padding: 70px 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
