@@ -99,10 +99,6 @@ nav a:hover::after {
     padding-top: 80px;
 }
 
-.banner .container {
-    animation: fadeIn 1s ease-out;
-}
-
 .banner h1 {
     font-size: 4rem;
     margin-bottom: 20px;
@@ -117,17 +113,6 @@ nav a:hover::after {
     margin-bottom: 40px;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.banner .escudo {
-    height: 180px;
-    margin: 30px 0;
-    filter: drop-shadow(0 0 10px rgba(229,28,35,0.5));
-    transition: transform 0.5s;
-}
-
-.banner .escudo:hover {
-    transform: scale(1.1);
 }
 
 .botao {
@@ -207,49 +192,68 @@ h2 span {
     line-height: 1.8;
 }
 
-/* Títulos */
+/* SEÇÃO DE TÍTULOS - CORRIGIDA */
 .titulos {
     background: #f5f5f5;
+    padding: 80px 0;
 }
 
-.lista-titulos {
+.grid-titulos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    justify-items: center;
 }
 
-.titulo {
-    background: #fff;
+.card-titulo {
+    width: 100%;
+    max-width: 350px;
+    background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
-.titulo:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+.card-titulo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.titulo h3 {
+.cabecalho-card {
     background: #000;
-    color: #fff;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+}
+
+.cabecalho-card h3 {
+    color: white;
     font-size: 1.3rem;
+    margin: 0;
 }
 
-.titulo p {
+.conteudo-card {
     padding: 20px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.titulo img {
+.conteudo-card p {
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.conteudo-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #eee;
 }
 
 /* Ídolos */
@@ -324,54 +328,4 @@ footer img:hover {
 footer p {
     font-size: 1rem;
     opacity: 0.8;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .logo span {
-        font-size: 1rem;
-    }
-    
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav a {
-        margin: 0 10px;
-    }
-    
-    .banner h1 {
-        font-size: 2.5rem;
-    }
-    
-    .banner p {
-        font-size: 1.2rem;
-    }
-    
-    .banner .escudo {
-        height: 120px;
-    }
-    
-    .conteudo {
-        flex-direction: column;
-    }
-    
-    .conteudo img {
-        width: 100%;
-    }
-    
-    section {
-        padding: 70px 0;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
 }
